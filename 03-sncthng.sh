@@ -7,7 +7,6 @@ docker create \
   -p 8384:8384 \
   -p 22000:22000 \
   -p 21027:21027/udp \
-  -v /server/syncthing/:/config \
-  -v /server/:/server \
+  -v /home/mrfox/syncthing/:/config \
   -v /library/media/:/library \
   linuxserver/syncthing
