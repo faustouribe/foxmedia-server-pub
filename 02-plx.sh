@@ -8,4 +8,5 @@ docker create \
   -v /home/mrfox/plex/config/:/config \
   -v /home/mrfox/plex/transcode/:/transcode \
   -v /library/media/:/library \
+  --restart unless-stopped \
   ghcr.io/linuxserver/plex:latest
