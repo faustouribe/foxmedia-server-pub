@@ -9,4 +9,5 @@ docker create \
   -p 21027:21027/udp \
   -v /home/mrfox/syncthing/:/config \
   -v /library/media/:/library \
+  --restart unless-stopped \
   linuxserver/syncthing
