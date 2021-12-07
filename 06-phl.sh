@@ -4,7 +4,7 @@
 
 # Set password at the end  
 # docker exec -it pihole /bin/bash
-# pihole -a -p _BJh2BQQ
+# pihole -a -p XXXXXPWDXXXXX
 # exit
 
 docker run -d \
