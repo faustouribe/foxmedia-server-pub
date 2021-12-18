@@ -1,3 +1,6 @@
+# Para ver QRcode
+# docker exec -it wireguard /app/show-peer 1
+
 docker run -d \
   --name=wireguard \
   --cap-add=NET_ADMIN \
