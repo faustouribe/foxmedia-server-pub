@@ -10,4 +10,12 @@ sudo apt install \
   $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null \
 && sudo apt update \  
 && sudo apt install docker-ce docker-ce-cli containerd.io \
-&& sudo usermod -aG docker $USER
+&& sudo usermod -aG docker $USER \
+#Vim
+&& sudo apt install neovim \
+# Extip installation
+&& sudo apt install figlet \
+&& mkdir ~/bin \
+&& cp extip ~/bin/ && sudo chmod +x ~/bin/extip \
+# Create services directory
+&& mkdir ~/services \a
