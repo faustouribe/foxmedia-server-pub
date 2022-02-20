@@ -18,4 +18,6 @@ sudo apt install \
 && mkdir ~/bin \
 && cp extip ~/bin/ && sudo chmod +x ~/bin/extip \
 # Create services directory
-&& mkdir ~/services \a
+&& mkdir ~/services \
+# Protect ENV files
+git update-index --skip-worktree ./services.env
