@@ -1,5 +1,5 @@
 #!/bin/bash
-
+source local \
 # https://github.com/pi-hole/docker-pi-hole/blob/master/README.md
 
 # Set password at the end  
@@ -12,15 +12,15 @@ docker run -d \
     -p 53:53/tcp -p 53:53/udp \
     -p 81:80 \
     -p 444:443 \
-    -e TZ="America/Chicago" \
-    -v /home/mrfox/etc-pihole:/etc/pihole \
-    -v /home/mrfox/etc-dnsmasq.d:/etc/dnsmasq.d \
+    -e TZ="$TIMEZONE" \
+    -v $PATHTOCONFIG/etc-pihole:/etc/pihole \
+    -v $PATHTOCONFIG/etc-dnsmasq.d:/etc/dnsmasq.d \
     --dns=1.1.1.1 \
     --restart=unless-stopped \
     --hostname pi.hole \
     -e VIRTUAL_HOST="pi.hole" \
     -e PROXY_LOCATION="pi.hole" \
-    -e ServerIP="192.168.1.10" \
+    -e ServerIP=$SERVERIP \
     pihole/pihole:latest
 
 printf 'Starting up pihole container '
