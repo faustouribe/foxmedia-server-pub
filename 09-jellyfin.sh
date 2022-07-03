@@ -1,5 +1,5 @@
-#!/bin/bash
-source local \
+#!/bin/bash -x
+source local
 docker run -d \
           --name=jellyfin \
           -e PUID=1000 \
