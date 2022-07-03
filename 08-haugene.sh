@@ -1,5 +1,5 @@
-#!/bin/bash
-source local \
+#!/bin/bash -x
+source local
 docker run --cap-add=NET_ADMIN -d \
   --name=haugene \
   -v $PATHTOLIBRARY:/data \
