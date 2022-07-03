@@ -1,5 +1,5 @@
-#!/bin/bash
-source local \
+#!/bin/bash -x
+source local
 # https://github.com/pi-hole/docker-pi-hole/blob/master/README.md
 
 # Set password at the end  
