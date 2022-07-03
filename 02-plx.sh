@@ -10,5 +10,4 @@ docker create \
   -v $PATHTOCONFIG/plex/config/:/config \
   -v $PATHTOCONFIG/plex/transcode/:/transcode \
   -v $PATHTOLIBRARY/:/library \
-  --restart unless-stopped \
-  ghcr.io/linuxserver/plex:latest
+ghcr.io/linuxserver/plex:latest
