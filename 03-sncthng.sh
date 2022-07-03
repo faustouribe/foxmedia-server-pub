@@ -1,3 +1,5 @@
+#!/bin/bash
+source local \
 docker create \
   --name=syncthing \
   -e PUID=1000 \
@@ -9,5 +11,5 @@ docker create \
   -p 21027:21027/udp \
   -v $PATHTOCONFIG/syncthing/:/config \
   -v $PATHTOLIBRARY/:/library \
-  --restart unless-stopped \
-  linuxserver/syncthing
+  $RESTART \
+linuxserver/syncthing
