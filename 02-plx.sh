@@ -5,8 +5,8 @@ docker create \
   -e PGID=1000 \
   -e VERSION=docker \
   -e UMASK_SET=022 \
-  -v /home/mrfox/plex/config/:/config \
-  -v /home/mrfox/plex/transcode/:/transcode \
-  -v /library/media/:/library \
+  -v $PATHTOCONFIG/plex/config/:/config \
+  -v $PATHTOCONFIG/plex/transcode/:/transcode \
+  -v $PATHTOLIBRARY/:/library \
   --restart unless-stopped \
   ghcr.io/linuxserver/plex:latest
