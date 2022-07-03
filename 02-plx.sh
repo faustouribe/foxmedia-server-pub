@@ -1,3 +1,5 @@
+#!/bin/bash
+source local
 docker create \
   --name=plex \
   --net=host \
