@@ -1,5 +1,5 @@
-#!/bin/bash
-source local \
+#!/bin/bash -x
+source local 
 docker run -d \
   --name=duckdns \
   -e PUID=1000 \
@@ -10,4 +10,4 @@ docker run -d \
   -e LOG_FILE=true  \
   -v $PATHTOCONFIG/duckdns:/config \
   --restart unless-stopped \
-  linuxserver/duckdns
+linuxserver/duckdns
