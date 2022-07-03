@@ -17,6 +17,8 @@ sudo apt install \
 && sudo apt install figlet \
 && mkdir ~/bin \
 && cp extip ~/bin/ && sudo chmod +x ~/bin/extip \
+&& cp plrename ~/bin/ && sudo chmod +x ~/bin/plrename \
+&& cp plretrieve ~/bin/ && sudo chmod +x ~/bin/extip \
 # Create services directory
 && mkdir ~/services \
 # Protect ENV files
