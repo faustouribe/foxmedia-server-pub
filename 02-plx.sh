@@ -1,5 +1,5 @@
 #!/bin/bash
-source local
+source local \
 docker create \
   --name=plex \
   --net=host \
@@ -10,4 +10,5 @@ docker create \
   -v $PATHTOCONFIG/plex/config/:/config \
   -v $PATHTOCONFIG/plex/transcode/:/transcode \
   -v $PATHTOLIBRARY/:/library \
+  $RESTART \
 ghcr.io/linuxserver/plex:latest
