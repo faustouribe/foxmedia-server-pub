@@ -1,5 +1,5 @@
-#!/bin/bash
-source local \
+#!/bin/bash -x
+source local 
 docker create \
   --name=heimdall \
   -e PUID=1000 \
