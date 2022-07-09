@@ -11,7 +11,7 @@ docker run --cap-add=NET_ADMIN -d \
   -e OPENVPN_PASSWORD=$OVPNPWD \
   -e WEBPROXY_ENABLED=true \
   -e WEBPROXY_PORT=8888 \
-  -e LOCAL_NETWORK=192.168.1.0/24 \
+  -e LOCAL_NETWORK=192.168.1.0/24,100.64.0.0/10 \
   -e TRANSMISSION_DOWNLOAD_DIR=/data/inter/downloads \
   -e OPENVPN_OPTS="--inactive 3600 --ping 10 --ping-exit 60" \
   --log-driver json-file \
