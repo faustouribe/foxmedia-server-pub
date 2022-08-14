@@ -5,7 +5,7 @@ docker run -d \
   -e PUID=1000 \
   -e PGID=1000 \
   -e TZ=$TIMEZONE \
-  -e SUBDOMAINS=$DCKDNSSUBDOMAINS \
+  -e SUBDOMAINS=$DCKDNSSUBDOMAIN \
   -e TOKEN=$DCKDNSTOKEN \
   -e LOG_FILE=true  \
   -v $PATHTOCONFIG/duckdns:/config \
