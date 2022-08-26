@@ -11,4 +11,4 @@ sudo apt install \
 && sudo apt update && sudo apt install docker-ce docker-ce-cli containerd.io && sudo usermod -aG docker $USER \
 # Install Extip
 sudo apt install figlet \
-&& sudo cp extip /usr/bin/ && sudo chmod +x /usr/bin/extip && cp plrename /usr/bin/ && sudo chmod +x /usr/bin/plrename && cp plretrieve /usr/bin/ && sudo chmod +x /usr/bin/plretrieve
+&& sudo cp extip /usr/bin/ && sudo chmod +x /usr/bin/extip && sudo cp plrename /usr/bin/ && sudo chmod +x /usr/bin/plrename && sudo cp plretrieve /usr/bin/ && sudo chmod +x /usr/bin/plretrieve
