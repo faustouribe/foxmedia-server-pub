@@ -1,2 +1,2 @@
 # Foxmedia Server
-  Harden Server before intslling this repo
+  Harden Server before installing this repo
