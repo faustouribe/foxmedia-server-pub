@@ -6,6 +6,6 @@ docker run -d \
   -e USERNAME=foxmedia \
   -e PASSWORD=secret123 \
   -v $PATHTOCONFIG/dav:/var/lib/dav \
-  -p 8800:80 \ 
+  -p 8800:80 \
   --restart unless-stopped \
 bytemark/webdav
