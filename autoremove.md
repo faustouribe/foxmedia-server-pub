@@ -21,20 +21,3 @@ chmod 774 /data/transmission-home/autoremove.sh
 "script-torrent-done-enabled": true,
 "script-torrent-done-filename": "/data/transmission-home/autoremove.sh",
 ```
-
-
-### Copy autoremove-external.sh to /usr/local/bin
-### Change permissions
-
-```
-sudo cp autoremove-external /usr/local/bin/ && \
-sudo chmod +x /usr/local/bin/autoremove-external
-```
-
-### Create a cron job to execute it every 5 minutes
-```
-crontab -e
-```
-```
-*/5 * * * * /usr/local/bin/autoremove-external>/library/transmission-home/autoremove.log
-```
