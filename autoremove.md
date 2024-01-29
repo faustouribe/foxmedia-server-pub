@@ -12,12 +12,12 @@ cp autoremove.sh /library/transmission-home/autoremove.sh
 docker exec -it haugene /bin/bash
 ```
 ```
-chown root:root /data/transmission-home/autoremove.sh \
+chown root:root /data/transmission-home/autoremove.sh && \
 chmod 774 /data/transmission-home/autoremove.sh
 ```
 
 ### Copy autoremove-external.sh to /usr/local/bin
-### Change peermissions
+### Change permissions
 
 ```
 sudo cp autoremove-external /usr/local/bin/ && \
