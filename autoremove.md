@@ -7,8 +7,12 @@
 
 ```
 cp autoremove.sh /library/transmission-home/autoremove.sh
+```
+```
 docker exec -it haugene /bin/bash
-chown root:root /data/transmission-home/autoremove.sh
+```
+```
+chown root:root /data/transmission-home/autoremove.sh \
 chmod 774 /data/transmission-home/autoremove.sh
 ```
 
@@ -16,12 +20,14 @@ chmod 774 /data/transmission-home/autoremove.sh
 ### Change peermissions
 
 ```
-sudo cp autoremove-external /usr/local/bin/
+sudo cp autoremove-external /usr/local/bin/ && \
 sudo chmod +x /usr/local/bin/autoremove-external
 ```
 
 ### Create a cron job to execute it every 5 minutes
 ```
 crontab -e
+```
+```
 */5 * * * * /usr/local/bin/autoremove-external>/library/transmission-home/autoremove.log
 ```
