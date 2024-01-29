@@ -16,6 +16,13 @@ chown root:root /data/transmission-home/autoremove.sh && \
 chmod 774 /data/transmission-home/autoremove.sh
 ```
 
+### stop container and edit settings.json
+```
+"script-torrent-done-enabled": true,
+"script-torrent-done-filename": "/data/transmission-home/autoremove.sh",
+```
+
+
 ### Copy autoremove-external.sh to /usr/local/bin
 ### Change permissions
 
