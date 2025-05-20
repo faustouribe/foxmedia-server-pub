@@ -1,4 +1,4 @@
-PATHTOCONFIG="~/config"
+PATHTOCONFIG="/home/xxxxxxxx/config"
 PATHTOLIBRARY="/library"
 DCKDNSSUBDOMAIN="subdomain"
 DCKDNSTOKEN="xxxxxxxxxx"
