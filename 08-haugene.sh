@@ -3,15 +3,17 @@ source local
 docker run --cap-add=NET_ADMIN -d \
   --name=haugene \
   -v $PATHTOLIBRARY:/data \
+  -v $PATHTOCONFIG/expressvpn:/etc/openvpn/custom \
+  -v $PATHTOCONFIG/haugene:/config \
   -v /etc/localtime:/etc/localtime:ro \
   -e CREATE_TUN_DEVICE=true \
-  -e OPENVPN_PROVIDER=EXPRESSVPN \
+  -e OPENVPN_PROVIDER=custom \
   -e OPENVPN_CONFIG=$OVPNCNF \
   -e OPENVPN_USERNAME=$OVPNUSR \
   -e OPENVPN_PASSWORD=$OVPNPWD \
   -e WEBPROXY_ENABLED=true \
   -e WEBPROXY_PORT=8888 \
-  -e LOCAL_NETWORK=192.168.1.0/24,100.64.0.0/10 \
+  -e LOCAL_NETWORK=192.168.16.0/24,100.64.0.0/10 \
   -e TRANSMISSION_DOWNLOAD_DIR=/data/inter/downloads \
   -e TRANSMISSION_WEB_UI=transmission-web-control \
   -e OPENVPN_OPTS="--inactive 3600 --ping 10 --ping-exit 60" \
